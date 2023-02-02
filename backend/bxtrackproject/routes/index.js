@@ -14,4 +14,23 @@ router.route('/createBook').post(
   
 )
 
+//Get Routes
+router.route('/getBook/:id').get(
+  BookController.getbook
+)
+
+router.route('/getAllBooks').get(
+  BookController.getallbooks
+)
+
+//Update Routes
+router.route('/updateBook/:id').put(
+  BookController.updatebook
+)
+
+//Delete Routes
+router.route('/deleteBook/:id').delete(
+  BookController.deletebook
+)
+
 module.exports = router;
