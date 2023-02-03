@@ -11,7 +11,6 @@ const Portal = ({fname,lname,setPortal}) => {
     const [Books,setBooks] = useState([])
 
     const [selectedBook,setSelectedBook] = useState()
-    const [select,isSelected] = useState(false)
 
     
 
@@ -124,7 +123,6 @@ const Portal = ({fname,lname,setPortal}) => {
                     <div>
                         <button className={selectedBook == item._id ? "light" : "default"}>
                         <li  onClick={() => {
-                            isSelected(true)
                             setTitle(item.title)
                             setAuthor(item.author)
                             setPages(item.pages)
