@@ -1,0 +1,104 @@
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.buttons div{
+    margin: 2%;
+}
+
+.add {
+    display: inline;
+  align-self: center;
+  justify-content: center;
+  border-radius: 0.37rem;
+  color: white;
+  font-weight: 600;
+  height: 2.5rem;
+  font-size: 1rem;
+  font-family: 'Ruda', sans-serif;
+  background: #2d7aad;
+  border: none;
+  margin-top: 10px;
+}
+.update {
+    display: inline;
+  align-self: center;
+  justify-content: center;
+  border-radius: 0.37rem;
+  color: white;
+  font-weight: 600;
+  height: 2.5rem;
+  font-size: 1rem;
+  font-family: 'Ruda', sans-serif;
+  background: #3cde47;
+  border: none;
+  margin-top: 10px;
+}
+
+.delete {
+    display: inline;
+  align-self: center;
+  justify-content: center;
+  border-radius: 0.37rem;
+  color: white;
+  font-weight: 600;
+  height: 2.5rem;
+  font-size: 1rem;
+  font-family: 'Ruda', sans-serif;
+  background: #c6403c;
+  border: none;
+  margin-top: 10px;
+}
+
+.back {
+    display: inline;
+    align-self: center;
+    justify-content: center;
+    border-radius: 0.37rem;
+    color: white;
+    font-weight: 600;
+    height: 2.5rem;
+    font-size: 1rem;
+    font-family: 'Ruda', sans-serif;
+    background: #3498db;
+    border: none;
+    margin-top: 10px;
+  }
+
+.light {
+    display: inline;
+    align-self: center;
+    justify-content: center;
+    border-radius: 0.37rem;
+    color: white;
+    font-weight: 600;
+    height: 2.5rem;
+    font-size: 1rem;
+    font-family: 'Ruda', sans-serif;
+    background: #3cde47;
+    border: none;
+    margin-top: 10px;
+}
+
+.default {
+    display: inline;
+    align-self: center;
+    justify-content: center;
+    border-radius: 0.37rem;
+    color: white;
+    font-weight: 600;
+    height: 2.5rem;
+    font-size: 1rem;
+    font-family: 'Ruda', sans-serif;
+    background: #b2b2b2;
+    border: none;
+    margin-top: 10px;
+}
+
+.heading {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+    font-weight: 500;
+    color:#379bde
+}

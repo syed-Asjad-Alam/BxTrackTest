@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import './Portal.css'
 
 const Portal = ({fname,lname,setPortal}) => {
     const [title,setTitle] = useState()
@@ -76,55 +77,58 @@ const Portal = ({fname,lname,setPortal}) => {
 
     return (
         <div>
-            <div>
+            <div className="heading">
                 <h1> Welcome {fname} {lname}</h1>
             </div>
             
             <div>
                 <form>
-                    <div>
+                    <div className="innerMain">
                         <label>Title</label>
                         <input type='text' value={title} onChange={(text) => 
                             setTitle(text.target.value)}></input>
                     </div>
-                    <div>
+                    <div className="innerMain">
                         <label>Author</label>
                         <input type='text' value={author} onChange={(text) => 
                             setAuthor(text.target.value)}></input>
                     </div>
-                    <div>
+                    <div className="innerMain">
                         <label>Pages</label>
                         <input type='number' value={pages} onChange={(text) => 
                             setPages(text.target.value)}></input>
                     </div>
-                    <div>
+                    <div className="innerMain">
                         <label>Date</label>
                         <input type='date' value={date} onChange={(text) => 
                             setDate(text.target.value)}></input>
                     </div>
                     
                 </form>
-                    <div>
-                        <button onClick={addBook}>Add Book</button>
+                <div className="buttons">
+                    <div >
+                        <button className="add" onClick={addBook}>Add Book</button>
                     </div>
-                    <div>
-                        <button onClick={updateBook}>Update Book</button>
+                    <div >
+                        <button className="update" onClick={updateBook}>Update Book</button>
                     </div>
-                    <div>
-                        <button onClick={deleteBook}>Delete Book</button>
+                    <div >
+                        <button className="delete" onClick={deleteBook}>Delete Book</button>
                     </div>
+                </div>
             </div>
             <div>
                 {Books.map((item,index) => {
                     return (
                     <div>
-                        <button>
-                        <li onClick={() => {
+                        <button className={selectedBook == item._id ? "light" : "default"}>
+                        <li  onClick={() => {
                             setTitle(item.title)
                             setAuthor(item.author)
                             setPages(item.pages)
                             setDate(item.published_at)
                             setSelectedBook(item._id)
+                            
                         }} 
                         key={index}>{item.title} {item.author} {item.pages} {item.published_at}</li>
                         </button>
@@ -132,7 +136,9 @@ const Portal = ({fname,lname,setPortal}) => {
                     )
                 })}
             </div>
-            <button onClick={() => setPortal(false)}>Back</button>
+            <div>
+                <button className="back" onClick={() => setPortal(false)}>Back</button>
+            </div>
 
             
         </div>

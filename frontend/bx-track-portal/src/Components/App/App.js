@@ -1,5 +1,6 @@
 import React, { useState } from "react"; 
 import Portal from '../Portal/Portal'
+import './App.css'
 
 
 function App() {
@@ -12,17 +13,17 @@ function App() {
   
 
   return (
-    <div>
+    <div className="Main">
     {portal ? <Portal fname={fname} lname={lname} setPortal={setPortal}/> : <div>
-    <div>
+    <div className="innerMain">
       <h3>Enter first Name</h3>
       <input value={fname}  onChange={(text) => setfname(text.target.value)}></input>
     </div>
-    <div>
+    <div className="innerMain">
       <h3>Enter last Name</h3>
       <input value={lname} onChange ={(text) => setlname(text.target.value)}></input>
     </div>
-    <button onClick={() => setPortal(true)}>Proceed</button>
+    <button className="proceed" onClick={() => setPortal(true)}>Proceed</button>
     
   </div>}
   </div>
